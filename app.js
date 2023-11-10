@@ -5,8 +5,11 @@ dotenv.config();
 
 const app = express();
 const port = 3000;
+let seq = 0;
 
 app.get('/', (req, res) => {
+
+  console.log(++seq);
   res.json({ message: "Hello World!", today: process.env.TODAY });
 })
 
